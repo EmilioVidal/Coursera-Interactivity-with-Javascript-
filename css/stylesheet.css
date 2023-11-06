@@ -1,0 +1,57 @@
+body{
+    background-color: blanchedalmond;
+    margin: 10px;
+}
+
+#message{
+    line-height:650px;
+		width: 1000px;
+    height: 600px;
+		border:5px solid black;
+		margin:0 auto;
+    background-color: #b83131;
+    background-image: url('');
+    background-repeat: no-repeat;
+    color:#FFFFFF;
+    text-align: center;
+    background-size: 100%;
+    margin-bottom:25px;
+    font-size: 150%;
+}
+
+.imagenes{
+    
+    justify-content: center;   
+    align-items: center; 
+    height: auto;
+    margin: auto;
+}
+
+.bat{
+    border: 10px solid rgb(255, 255, 255);
+    width: 360;
+    height: 180;
+    margin: 2cm;
+}
+
+.cap{
+    width: 360;
+    height: 180;
+    border: 10px solid rgb(29, 29, 97);
+    margin: 2cm;
+
+}
+
+.bros{
+    width: 360;
+    height: 180;
+    border: 10px solid purple;
+    margin: 2cm;
+
+}
+
+#supes{
+    font-size: 25px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

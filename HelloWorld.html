@@ -1,0 +1,69 @@
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="css\stylesheet.css">
+        <script type="text/javascript" src="js\HelloWorld.js"></script> 
+    </head>
+    <body onload="loadSupers();diferente()">
+        <div id="message">pasa el mouse por una foto</div>
+    </body>
+    <div class="imagenes">
+    <img class = "bat" alt = "BATMAN" src="img\bat.webp" onmouseover="showProperties(this, 'rgb(255, 255, 255)', 'black')"
+    onmouseleave="resetProperties()" onclick="showButton()">
+    <img class = "cap" alt = "MIGHTY CAP" src="img\cap.webp"onmouseover="showProperties(this, 'rgb(29, 29, 97)')"
+    onmouseleave="resetProperties()">
+    <img class = "bros" alt = "BATBROS" src="img\bros1.png"onmouseover="showProperties(this, 'purple')"
+    onmouseleave="resetProperties()">
+</div>
+<button id = "boton" onclick= "mySupes();" >Agregua tu supes favorito!</button>
+<p id = "supes"></p>
+
+<form>
+    <label for ='nombre'>Nombre: </label>
+    <input type="text" name="nombre" id="nombre" name = 'nombre' placeholder="Emi" pattern="[a-zA-Z]+" required> <br/>
+    <label>Email: <input type="email" id = "email_addr" name = 'correo' placeholder="emigamer@gmail.com"></label> <br/>
+    <label>Confirm email: <input type="email" id = "email_rep" name = 'veriCorreo'></label> <br/>
+    <input type= 'submit' value ="Email Check" onclick="return check();"> <br/>
+    <label>Password: <input type="password" name='contra' pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"></label><br/>
+    <label>Edad: <input type="date" id 'edad' value = 'edad'><br/>
+    <label>Gender<br/></label>
+    <label><input type="radio" name="pop" id = "men" onchange="gender()"><slot value="men">MEN</slot><br/>
+    <label><input type="radio" name="pop" id = "woman"onchange="gender()"><slot value="woman">WOMAN</slot><br/>
+    <br/>
+    <label>Fevorite Super:</label><br/>
+        <label><input type="radio" name="super" id = "cap"onclick="diferente()"><slot value="cap">CAPITAIN AMERICA</slot><br/>
+        <label><input type="radio" name="super" id = "bat"onclick="diferente()"><slot value="bat">BATMAN</slot><br/>
+        <label><input type="radio" name="super" id = "night"onclick="diferente()"><slot value="night">NIGHTWING</slot><br/>
+        <label><input type="radio" name="super" id = "red"onclick="diferente()"><slot value="red">RedHood</slot><br/>
+        <label><input type="radio" name="super" id = "otro" onclick="diferente()"><slot value="otro">otro:</slot><br/>
+        <br/>
+        <div id = "otroS">
+            <labe>Nombre del Super: <input type="text" id = "otroSuper"></labe><br>
+
+
+        </div>
+    <input type= 'submit' value ="Sumit" onclick="return checkF();">
+    <h1>JavaScript Homework</h1>
+	<p>Add the JavaScript code needed to enable auto-complete on this form.  Whenever the checkbox is checked, the code should automatically copy the values from Shipping Name and Shipping Zip into the Billing Name and Billing Zip.  If the checkbox is unchecked, the Billing Name and Billing Zip should go blank.</p>
+
+<form>
+		<fieldset>
+			<legend>Shipping Information</legend>
+			<label for ="shippingName">Name:</label>
+			<input type = "text" name = "shipName" id = "shippingName" required><br/>
+			<label for = "shippingZip">Zip code:</label>
+			<input type = "text" name = "shipZip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
+		</fieldset>
+		<input type="checkbox" id="same" name="same" onchange= "billingFunction()"/>
+		<label for = "same">Is the Billing Information the Same?</label>
+				
+		<fieldset> 
+			<legend>Billing Information</legend>
+			<label for ="billingName">Name:</label>
+			<input type = "text" name = "billName" id = "billingName" required><br/>
+			<label for = "billingZip">Zip code:</label>
+			<input type = "text" name = "billZip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+		</fieldset>
+			<input type = "submit" value = "Verify"/>
+		</form>
+</form>
+</html>
